@@ -1,0 +1,57 @@
+{
+  "profiles": [
+    {
+      "profileId": 1748019597438,
+      "name": "Olivia Park",
+      "age": 20,
+      "job": "Secretary",
+      "introduction": "Honestly, life in the fast lane suits me—especially when the playlist’s good and there’s sunlight streaming through the window. If you can match my energy and aren’t afraid of a little sparkle (and maybe a dash of car karaoke), let’s turn the ordinary into a photo moment. 🚗✨",
+      "keywords": [
+        "👗 fashion",
+        "🌅 sunsets",
+        "🎶 music",
+        "🚘 road trips"
+      ],
+      "style": "Confident and Flirty",
+      "avatar": "",
+      "background": "",
+      "photos_url": []
+    },
+    {
+      "profileId": 1748019605688,
+      "name": "Anika Choi",
+      "age": 23,
+      "job": "Event Planner",
+      "introduction": "Sunlight, gold, and not-so-low-key main character energy — yep, that’s me, draped in red and ready to plan the party (or date?) of your dreams. If you can handle a girl who loves a bit of sparkle and a lot of adventure, let’s make some memories worth retelling. Ready to get swept up in a fairytale (minus the midnight curfew)? 😉✨",
+      "keywords": [
+        "🎉 events",
+        "🌺 fashion",
+        "🎵 music",
+        "🏰 culture",
+        "📸 photography"
+      ],
+      "style": "Confident and Flirty",
+      "avatar": "",
+      "background": "",
+      "photos_url": []
+    },
+    {
+      "profileId": 1748019616559,
+      "name": "Jenna Wang",
+      "age": 21,
+      "job": "Marketing Associate",
+      "introduction": "Call it main character energy or just my way of turning a Monday into a mini runway show—yellow earrings and all. If you catch me power-walking through the office, I’m probably on my way to pitch a bold idea (or grab another iced latte). Swipe right if you thrive on ambition, style, and the occasional dance break in the copy room. 💛📄",
+      "keywords": [
+        "📊 marketing",
+        "👗 fashion",
+        "💡 creativity",
+        "📄 office life",
+        "☕ coffee"
+      ],
+      "style": "Confident and Flirty",
+      "avatar": "",
+      "background": "",
+      "photos_url": []
+    }
+  ]
+}

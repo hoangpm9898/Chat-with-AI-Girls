@@ -1,0 +1,12 @@
+{
+  "actions": [
+    {
+      "id": 1,
+      "name": "Talking",
+      "desc": "",
+      "keywords": ["talk", "smile"],
+      "prompt_path": "data/prompts/video/1.txt",
+      "prompt_tmp": ""
+    }
+  ]
+}

@@ -1,11 +1,12 @@
 import { Module } from '@nestjs/common';
 import { BullModule } from '@nestjs/bull';
 import { QueueService } from './queue.service';
+import {config} from "#root/config";
 
 @Module({
 	imports: [
 		BullModule.forRoot({
-			redis: { host: 'localhost', port: 6379 },
+			redis: { host: config.REDIS_HOST, port: config.REDIS_PORT },
 		}),
 		BullModule.registerQueue({ name: 'task' }),
 	],

@@ -1,6 +1,3 @@
-// Import this first!
-
-// Now import other modules
 import { HttpAdapterHost, NestFactory } from '@nestjs/core';
 import { AppModule } from './modules/app/app.module';
 import { config } from './config';
@@ -27,9 +24,6 @@ async function bootstrap() {
 	app.useGlobalFilters(new AllExceptionsFilter(app.get(HttpAdapterHost)));
 	app.useGlobalFilters(new HttpExceptionFilter());
 	app.useGlobalFilters(new HttpErrorFilter());
-
-	const swaggerDocument = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'swagger.json'), 'utf8'));
-	SwaggerModule.setup('doc', app, swaggerDocument);
 
 	await app.listen(config.PORT);
 }

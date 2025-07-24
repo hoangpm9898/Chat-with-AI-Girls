@@ -8,13 +8,17 @@ const createConfigFromEnvironment = (environment: NodeJS.ProcessEnv) => {
 		LOG_LEVEL: z
 			.enum(['fatal', 'error', 'warn', 'log', 'debug', 'verbose'])
 			.array()
-			.default(['fatal', 'error', 'warn', 'log', 'debug']),
+			.default(['fatal', 'error', 'warn', 'log', 'debug', 'verbose']),
 
 		// Web server Configurations
 		PORT: port().default(3000),
 		// Redis Configurations
 		REDIS_HOST: z.string().default('localhost'),
 		REDIS_PORT: port().default(6379),
+		//Bunny Configurations
+		BUNNY_API_KEY: z.string(),
+		BUNNY_STORAGE_ZONE: z.string(),
+		BUNNY_STORAGE_REGION: z.string(),
 	});
 
 	return {

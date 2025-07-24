@@ -41,10 +41,11 @@ export class ApiResponse {
 }
 
 export type Meta = {
-	offset?: number;
+	has_next?: boolean;
+	next_cursor?: string;
 	limit?: number;
-	total?: number;
-	count?: number;
+	total_records?: number;
+	current_offset?: number;
 };
 
 export type Pagination<T = any> = {

@@ -1,3 +1,5 @@
+import { Meta } from '#root/common/types';
+
 export class CursorHelper {
 	static encodeCursor(data: any): string {
 		return Buffer.from(JSON.stringify(data)).toString('base64');
@@ -12,7 +14,7 @@ export class CursorHelper {
 		}
 	}
 
-	static createPaginationMeta(offset: number, limit: number, total: number) {
+	static createPaginationMeta(offset: number, limit: number, total: number): Meta {
 		const hasNext = offset + limit < total;
 		const nextCursor = hasNext ? this.encodeCursor({ offset: offset + limit }) : null;
 

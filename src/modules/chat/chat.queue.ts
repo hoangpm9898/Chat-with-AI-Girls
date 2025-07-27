@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectQueue } from '@nestjs/bull';
 import { Queue } from 'bull';
-import { UploadVideoDto } from '#root/modules/api/dto/upload-video';
 
 @Injectable()
 export class ChatQueue {

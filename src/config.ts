@@ -9,9 +9,10 @@ const createConfigFromEnvironment = (environment: NodeJS.ProcessEnv) => {
 			.enum(['fatal', 'error', 'warn', 'log', 'debug', 'verbose'])
 			.array()
 			.default(['fatal', 'error', 'warn', 'log', 'debug', 'verbose']),
-
 		// Web server Configurations
 		PORT: port().default(3000),
+		// API Server Configurations
+		SERVER_HOST: z.string().default('http://localhost:3000'),
 		// Redis Configurations
 		REDIS_HOST: z.string().default('localhost'),
 		REDIS_PORT: port().default(6379),
@@ -19,6 +20,12 @@ const createConfigFromEnvironment = (environment: NodeJS.ProcessEnv) => {
 		BUNNY_API_KEY: z.string(),
 		BUNNY_STORAGE_ZONE: z.string(),
 		BUNNY_STORAGE_REGION: z.string(),
+		// Kling Configurations
+		KLING_API_KEY: z.string(),
+		KLING_API_URL: z.string().default('https://api.klingai.com'),
+		// ChatGPT Configurations
+		CHATGPT_API_KEY: z.string(),
+		CHATGPT_API_URL: z.string().default('https://api.openai.com/v1'),
 	});
 
 	return {

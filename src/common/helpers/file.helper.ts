@@ -18,3 +18,12 @@ export async function updateJsonFile<T>(path: string, updateFn: (data: T) => T, 
 	const updatedData = updateFn(data);
 	await writeJsonFile(path, updatedData);
 }
+
+export async function readTextFile(path: string): Promise<string | null> {
+	try {
+		return fs.readFile(path, 'utf-8');
+	} catch (error) {
+		console.error('Error reading file:', error);
+		return null;
+	}
+}

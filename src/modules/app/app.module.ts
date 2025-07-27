@@ -7,6 +7,10 @@ import { config } from '#root/config';
 import * as redisStore from 'cache-manager-redis-store';
 import { BullModule } from '@nestjs/bull';
 import { ApiModule } from '#root/modules/api/api.module';
+import {VideoModule} from "#root/modules/video/video.module";
+import {ChatModule} from "#root/modules/chat/chat.module";
+import {ChatGPTModule} from "#root/modules/chatgpt/chatgpt.module";
+import {KlingModule} from "#root/modules/kling/kling.module";
 
 @Module({
 	imports: [
@@ -28,6 +32,10 @@ import { ApiModule } from '#root/modules/api/api.module';
 			},
 		}),
 		ApiModule,
+		VideoModule,
+		ChatModule,
+		ChatGPTModule,
+		KlingModule
 	],
 	controllers: [AppController],
 })

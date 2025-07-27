@@ -34,7 +34,7 @@ export class BunnyService {
 					maxContentLength: Infinity,
 				}),
 			);
-			if (upload.status === 200) this.logger.log(`File ${fileName} uploaded successfully to Bunny CDN`);
+			if (upload.status === 201) this.logger.log(`File ${fileName} uploaded successfully to Bunny CDN`);
 		} catch (error) {
 			this.logger.error(`Failed to upload ${fileName} to Bunny CDN: ${error.message}`);
 			throw new Error(`Upload failed: ${error.message}`);

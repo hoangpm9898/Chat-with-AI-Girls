@@ -56,7 +56,7 @@ export class ApiController {
 	})
 	async uploadVideo(
 		@UploadedFile() file: Express.Multer.File,
-		@Body() body: { profileId: string; actionId: string },
+		@Body() body: { profileId: string; toneId: string },
 	) {
 		const result = await this.videoQueue.queueUpload(file, body, file.destination);
 		return ApiResponse.Success(result);
@@ -70,7 +70,7 @@ export class ApiController {
 	})
 	async uploadChatJson(
 		@UploadedFile() file: Express.Multer.File,
-		@Body() body: { profileId: string; actionId: string },
+		@Body() body: { profileId: string; toneId: string },
 	) {
 		const result = await this.chatQueue.queueUpload(file, body, file.destination);
 		return ApiResponse.Success(result);

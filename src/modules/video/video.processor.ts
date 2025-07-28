@@ -5,6 +5,7 @@ import { BunnyService } from '#root/modules/bunny/bunny.service';
 import * as path from 'path';
 import { updateJsonFile } from '#root/common/helpers';
 import { Logger } from '@nestjs/common';
+import {Video} from "#root/modules/ai-girl/types";
 
 @Processor('upload')
 export class VideoProcessor {
@@ -17,14 +18,14 @@ export class VideoProcessor {
 		const { profileId, actionId, filePath } = job.data;
 		const uploadedUrl = await this.bunnyService.upload(filePath, filePath);
 		const newVideo = {
-			jobId: job.id,
+			jobId:String(job.id),
 			profileId,
 			actionId,
 			url: uploadedUrl,
 		};
 		try {
 			const metadataPath = 'data/metadata/videos.json';
-			await updateJsonFile<{ videos: any[] }>(
+			await updateJsonFile<{ videos: Video[] }>(
 				metadataPath,
 				(data) => {
 					const videos = Array.isArray(data?.videos) ? data.videos : [];

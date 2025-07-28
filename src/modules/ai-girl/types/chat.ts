@@ -1,6 +1,6 @@
 export interface Chat {
 	jobId: string;
 	profileId: string;
-	actionId: number;
+	toneId: number;
 	url: string;
 }

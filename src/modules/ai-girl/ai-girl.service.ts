@@ -38,7 +38,7 @@ export class AiGirlService {
 	}
 
 	public async getTones(): Promise<Tone[]> {
-		return this.cacheService.remember<Tone[]>('ai-girl-profiles', async () => {
+		return this.cacheService.remember<Tone[]>('ai-girl-tones', async () => {
 			const result = await readJsonFile<{ tones: Tone[] }>('data/tones.json');
 			return result?.tones ?? [];
 		});

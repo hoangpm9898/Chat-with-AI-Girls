@@ -6,12 +6,12 @@ import { Queue } from 'bull';
 export class KlingQueue {
 	constructor(@InjectQueue('generate') private readonly chatQueue: Queue) {}
 
-	async queueKling(profileId: number, actionIds: number[], imageUrl: string) {
+	async queueKling(profileId: number, toneIds: number[], imageUrl: string) {
 		const job = await this.chatQueue.add(
 			'kling-generate-video',
 			{
 				profileId,
-				actionIds,
+				toneIds,
 				imageUrl,
 			},
 			{

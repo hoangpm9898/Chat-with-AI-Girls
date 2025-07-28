@@ -14,12 +14,12 @@ export class ChatProcessor {
 	@Process('upload-chat')
 	async handleUpload(job: Job) {
 		this.logger.log(`Processing job ${job.id} for chat upload`);
-		const { profileId, actionId, filePath } = job.data;
+		const { profileId, toneId, filePath } = job.data;
 		const uploadedUrl = await this.bunnyService.upload(filePath, filePath);
 		const newChat = {
 			jobId: job.id,
 			profileId,
-			actionId,
+			toneId,
 			url: uploadedUrl,
 		};
 		const metadataPath = 'data/metadata/chats.json';
@@ -33,6 +33,6 @@ export class ChatProcessor {
 			{ chats: [] },
 		);
 		await fs.rm(path.dirname(filePath), { recursive: true, force: true });
-		this.logger.log(`Chat uploaded successfully for job ${job.id}, profile ID ${profileId}, action ID ${actionId}`);
+		this.logger.log(`Chat uploaded successfully for job ${job.id}, profile ID ${profileId}, tone ID ${toneId}`);
 	}
 }

@@ -9,6 +9,6 @@ import { KlingModule } from '#root/modules/kling/kling.module';
 @Module({
 	controllers: [ApiController],
 	providers: [ApiController],
-	imports: [AiGirlModule, ChatModule, VideoModule, KlingModule, ChatGPTModule, ],
+	imports: [AiGirlModule, ChatModule, VideoModule, KlingModule, ChatGPTModule],
 })
 export class ApiModule {}

@@ -3,8 +3,8 @@ import { BullModule } from '@nestjs/bull';
 import { KlingService } from '#root/modules/kling/kling.service';
 import { KlingQueue } from '#root/modules/kling/kling.queue';
 import { KlingController } from '#root/modules/kling/kling.controller';
-import {HttpModule} from "@nestjs/axios";
-import {BunnyModule} from "#root/modules/bunny/bunny.module";
+import { HttpModule } from '@nestjs/axios';
+import { BunnyModule } from '#root/modules/bunny/bunny.module';
 
 @Module({
 	imports: [
@@ -12,7 +12,7 @@ import {BunnyModule} from "#root/modules/bunny/bunny.module";
 			name: 'generate',
 		}),
 		HttpModule,
-		BunnyModule
+		BunnyModule,
 	],
 	controllers: [KlingController],
 	providers: [KlingService, KlingQueue],

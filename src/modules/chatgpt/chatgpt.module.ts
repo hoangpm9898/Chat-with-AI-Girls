@@ -3,8 +3,8 @@ import { BullModule } from '@nestjs/bull';
 import { ChatGPTQueue } from '#root/modules/chatgpt/chatgpt.queue';
 import { ChatGPTProcessor } from '#root/modules/chatgpt/chatgpt.processor';
 import { ChatGPTService } from '#root/modules/chatgpt/chatgpt.service';
-import {AiGirlModule} from "#root/modules/ai-girl/ai-girl.module";
-import {BunnyModule} from "#root/modules/bunny/bunny.module";
+import { AiGirlModule } from '#root/modules/ai-girl/ai-girl.module';
+import { BunnyModule } from '#root/modules/bunny/bunny.module';
 
 @Module({
 	imports: [
@@ -12,9 +12,9 @@ import {BunnyModule} from "#root/modules/bunny/bunny.module";
 			name: 'generate',
 		}),
 		AiGirlModule,
-		BunnyModule
+		BunnyModule,
 	],
 	providers: [ChatGPTQueue, ChatGPTProcessor, ChatGPTService],
-	exports: [ChatGPTQueue, ChatGPTService]
+	exports: [ChatGPTQueue, ChatGPTService],
 })
 export class ChatGPTModule {}

@@ -4,7 +4,7 @@ import * as fs from 'fs/promises';
 import { BunnyService } from '#root/modules/bunny/bunny.service';
 import * as path from 'path';
 import { updateJsonFile } from '#root/common/helpers';
-import {Logger} from "@nestjs/common";
+import { Logger } from '@nestjs/common';
 
 @Processor('upload')
 export class ChatProcessor {

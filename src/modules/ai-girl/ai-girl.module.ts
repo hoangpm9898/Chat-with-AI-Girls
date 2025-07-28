@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { AiGirlService } from './ai-girl.service';
-import {CacheModule} from "#root/modules/cache/cache.module";
+import { CacheModule } from '#root/modules/cache/cache.module';
 
 @Module({
 	imports: [CacheModule],
